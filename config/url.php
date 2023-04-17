@@ -14,7 +14,7 @@ define("URL", "http://localhost/secreto/public");
  * @var string
  */
 
-define("URL_REDIRECT", URL."/?m=0&r=");
+define("URL_REDIRECT_GET", URL."/?m=0&r=");
 
 /**
  * Define the url for redirecting with `API` request

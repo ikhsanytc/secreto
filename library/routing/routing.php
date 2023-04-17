@@ -29,7 +29,9 @@ function init_routing()
         exit;
     } else {
         require $route_file;
-        layout_load_main();
+        if($_ENV["routing_is_get"]) {
+            layout_load_main();
+        }
     }
 
 }

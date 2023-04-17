@@ -5,7 +5,7 @@
  */
 
 // example comment
-$_ENV["comment"] = [
+$_ENV["comments"] = [
     [
         "time" => time(),
         "comment" => "Lorem Ipsum Dolor Sit Amet",

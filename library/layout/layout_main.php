@@ -20,7 +20,7 @@ if(isset($_ENV["layout_source"])) {
     <title><?= $_ENV["layout_title"] ?? APP_TITLE ?></title>
 
     <?php if(isset($_ENV["layout_style"])): ?>
-        <link rel="stylesheet" href="<?= URL ?>css/<?= $_ENV["layout_style"] ?>">
+        <link rel="stylesheet" href="<?= URL ?>/<?= $_ENV["layout_style"] ?>">
     <?php endif; ?>
 
 </head>
