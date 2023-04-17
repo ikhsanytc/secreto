@@ -5,7 +5,6 @@ session_start();
 
 require __APP_DIR__ . "/config/app.php";
 require __APP_DIR__ . "/config/url.php";
-require __APP_DIR__ . "/config/email.php";
 require __APP_DIR__ . "/config/database.php";
 require __APP_DIR__ . "/library/uuid/uuid.php";
 require __APP_DIR__ . "/library/token/token.php";
