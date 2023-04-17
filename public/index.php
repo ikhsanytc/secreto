@@ -9,7 +9,6 @@ require __APP_DIR__ . "/config/email.php";
 require __APP_DIR__ . "/config/database.php";
 require __APP_DIR__ . "/library/uuid/uuid.php";
 require __APP_DIR__ . "/library/token/token.php";
-require __APP_DIR__ . "/library/email/email.php";
 require __APP_DIR__ . "/library/header/header.php";
 require __APP_DIR__ . "/library/routing/routing.php";
 require __APP_DIR__ . "/library/message/message.php";
