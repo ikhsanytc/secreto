@@ -20,4 +20,4 @@ $_ENV["comment"] = [
     ],
 ];
 
-require __APP_DIR__."/app/component/comment/comment.php";
+require __APP_DIR__."/app/component/comment.php";

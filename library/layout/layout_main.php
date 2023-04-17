@@ -26,8 +26,6 @@ if(isset($_ENV["layout_source"])) {
 </head>
 <body>
 
-    <?php require __APP_DIR__."/app/component/navbar/navbar.php" ?>
-    <?php require __APP_DIR__."/app/component/sidebar/sidebar.php" ?>
     <?php require __APP_DIR__."/app/page/{$_ENV['layout_view']}" ?>
 
 </body>
