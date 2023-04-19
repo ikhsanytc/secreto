@@ -6,7 +6,7 @@
  * @var string
  */
 
-define("APP_TITLE", "title");
+define("APP_TITLE", "Maaf Maafan cuy 🙏🙏🙏");
 
 /**
  * Define the application keyword
@@ -14,7 +14,7 @@ define("APP_TITLE", "title");
  * @var string
  */
 
-define("APP_KEYWORD", "keyword");
+define("APP_KEYWORD", "secreto");
 
 /**
  * Define the application description
@@ -22,4 +22,4 @@ define("APP_KEYWORD", "keyword");
  * @var string
  */
 
-define("APP_DESCRIPTION", "description");
+define("APP_DESCRIPTION", "Secreto, Maaf Maafan Cuy 🙏🙏🙏");
