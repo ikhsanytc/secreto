@@ -11,6 +11,12 @@ if (!isset($_POST['nama']) || !isset($_POST['pesan'])) {
 
 $name = $_POST['nama'];
 $pesan = $_POST['pesan'];
+$pesan = remove_emoji($pesan); // remove emoji from pesan (apparently 000webhost database seems to not support emoji)
+
+if(empty($pesan)) {
+    exit;
+}
+
 $id = uuidv4();
 
 database_query_prepare("INSERT INTO pesan (id, name, pesan, time, count) VALUES (?,?,?,?,?)");

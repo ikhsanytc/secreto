@@ -29,7 +29,7 @@ $data = database_query_result();
         <div class="pesan-list">
             <div class="pesan">
                 <div class="pesan-title">
-                    <p><b>From: <?= e($pesan['name']) ?></b></p>
+                    <p><b>From: <?=htmlspecialchars( e($pesan['name']) )?></b></p>
                     <p><?php
                         $time = $pesan['time'];
                         $time_current = time();
@@ -49,7 +49,7 @@ $data = database_query_result();
                         ?></p>
                 </div>
                 <div class="pesan-content">
-                    <p><?= $pesan['pesan'] ?></p>
+                    <p><?=htmlspecialchars( $pesan['pesan'] )?></p>
                 </div>
                 <?php /**
                  * San nanti kalo usernya pencet tombol lihat komentar nanti kirim ajax request ke routes/api/get_comment.php

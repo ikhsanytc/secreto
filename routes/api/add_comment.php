@@ -13,6 +13,12 @@ if (!isset($_POST['id'])) {
 }
 
 $komen = $_POST['komen'];
+$komen = remove_emoji($komen);  // remove emoji from komen (apparently 000webhost database seems to not support emoji)
+
+if(empty($komen)) {
+    exit;
+}
+
 $id = $_POST['id'];
 
 database_query_prepare('SELECT * FROM pesan WHERE id=?');
