@@ -1,4 +1,4 @@
-<b>Komentar (<?= $pesan['count'] ?>)</b>
+<b>Komentar (<?= count($komen) ?>)</b>
 <div id="pesan-id">
     <?php foreach ($komen as $comment) : ?>
         <div class="komentar">

@@ -27,7 +27,7 @@ $data = database_query_result();
     </div>
     <?php foreach ($data as $pesan) : ?>
         <div class="pesan-list">
-            <div class="pesan">
+            <div class="pesan" id="<?= $pesan["id"] ?>">
                 <div class="pesan-title">
                     <p><b>From: <?=htmlspecialchars( e($pesan['name']) )?></b></p>
                     <p><?php
@@ -71,4 +71,7 @@ $data = database_query_result();
             </div>
         </div>
     <?php endforeach; ?>
+    <div class="about" style="text-align: center; font-size: 0.875rem;">
+        <p>Copyright &copy; 2023 Aditya Wahyu Santoso & Muhammad Ikhsan</p>
+    </div>
 </div>

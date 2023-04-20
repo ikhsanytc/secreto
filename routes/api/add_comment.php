@@ -21,16 +21,19 @@ if(empty($komen)) {
 
 $id = $_POST['id'];
 
-database_query_prepare('SELECT * FROM pesan WHERE id=?');
-database_query_bind('i', $id);
+database_query_prepare('SELECT COUNT(*) FROM pesan WHERE id=?');
+database_query_bind('s', $id);
 database_query_execute();
-$pesan = database_query_result();
+
+if(database_query_result_count() == 0) {
+    http_response_code(400);
+    exit;
+}
 
 database_query_prepare('INSERT INTO komen (id, pesan, time) VALUES (?,?,?)');
 database_query_bind("ssi", $id, $komen, time());
 database_query_execute();
 
-database_query_prepare('UPDATE pesan SET count=? WHERE id=?');
-$count = $pesan[0]['count'] + 1;
-database_query_bind("ii", $count, $id);
+database_query_prepare('UPDATE pesan SET count=count+1 WHERE id=?');
+database_query_bind("s", $id);
 database_query_execute();

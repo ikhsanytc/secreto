@@ -49,7 +49,7 @@ $data = database_query_result()[0];
                 </form>
             </div>
             <div class="pesan-footer">
-                <a href="<?= URL_REDIRECT_GET ?>index"><button name="view-komen" style="cursor: pointer;">Kembali</button></a>
+                <a href="<?= URL_REDIRECT_GET ?>index#<?= $data["id"] ?>"><button name="view-komen" style="cursor: pointer;">Kembali</button></a>
             </div>
         </div>
     </div>
