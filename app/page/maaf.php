@@ -84,10 +84,11 @@ $data = database_query_result()[0];
             }
         }
         xhttp.send('komen=' + encodeURIComponent(inp) + '&id=' + encodeURIComponent(id));
+        setTimeout(updateComments, 1000);
     }
     document.getElementById('form-komen').addEventListener('submit', function(e) {
         e.preventDefault();
         insertComments();
     })
-    setInterval(updateComments, 1000)
+    updateComments();
 </script>

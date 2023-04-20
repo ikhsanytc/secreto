@@ -1,5 +1,5 @@
 <?php
-database_query_prepare("SELECT * FROM pesan");
+database_query_prepare("SELECT * FROM pesan ORDER BY time DESC");
 database_query_execute();
 $data = database_query_result();
 ?>
