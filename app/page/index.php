@@ -29,7 +29,7 @@ $data = database_query_result();
         <div class="pesan-list">
             <div class="pesan" id="<?= $pesan["id"] ?>">
                 <div class="pesan-title">
-                    <p><b>From: <?=htmlspecialchars( e($pesan['name']) )?></b></p>
+                    <p><b>From: <?=htmlspecialchars( $pesan['name'] )?></b></p>
                     <p><?php
                         $time = $pesan['time'];
                         $time_current = time();
