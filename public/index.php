@@ -17,6 +17,5 @@ require __APP_DIR__ . "/library/layout/layout_control.php";
 require __APP_DIR__ . "/library/remove_emoji/remove_emoji.php";
 
 init_message();
-// init_token();
 init_database();
 init_routing();

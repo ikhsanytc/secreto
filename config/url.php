@@ -14,7 +14,7 @@ define("URL", "http://localhost/secreto/public");
  * @var string
  */
 
-define("URL_REDIRECT_GET", URL."/?m=0&r=");
+define("URL_REDIRECT_GET", URL . "/?m=0&r=");
 
 /**
  * Define the url for redirecting with `API` request
@@ -22,7 +22,7 @@ define("URL_REDIRECT_GET", URL."/?m=0&r=");
  * @var string
  */
 
-define("URL_REDIRECT_API", URL."/?m=1&r=");
+define("URL_REDIRECT_API", URL . "/?m=1&r=");
 
 /**
  * Define the url for redirecting with `POST` request
@@ -30,7 +30,7 @@ define("URL_REDIRECT_API", URL."/?m=1&r=");
  * @var string
  */
 
-define("URL_REDIRECT_POST", URL."/?m=2&r=");
+define("URL_REDIRECT_POST", URL . "/?m=2&r=");
 
 /**
  * Define the url for redirecting into showing message
@@ -38,7 +38,7 @@ define("URL_REDIRECT_POST", URL."/?m=2&r=");
  * @var string
  */
 
-define("URL_REDIRECT_MESSAGE", URL."/?message=");
+define("URL_REDIRECT_MESSAGE", URL . "/?message=");
 
 /**
  * Define the url for the storage directory
@@ -46,4 +46,4 @@ define("URL_REDIRECT_MESSAGE", URL."/?message=");
  * @var string
  */
 
-define("STORAGE", URL."/storage/");
+define("STORAGE", URL . "/storage/");

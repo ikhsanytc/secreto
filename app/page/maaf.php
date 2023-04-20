@@ -11,7 +11,7 @@ $data = database_query_result()[0];
     <div class="pesan-list">
         <div class="pesan">
             <div class="pesan-title">
-                <p><b>From: <?=htmlspecialchars( $data['name'] )?></b></p>
+                <p><b>From: <?= htmlspecialchars($data['name']) ?></b></p>
                 <p><?php
                     $time = $data['time'];
                     $time_current = time();
@@ -31,7 +31,7 @@ $data = database_query_result()[0];
                     ?></p>
             </div>
             <div class="pesan-content">
-                <p><?=htmlspecialchars( $data['pesan'] )?></p>
+                <p><?= htmlspecialchars($data['pesan']) ?></p>
             </div>
             <?php /**
              * San nanti kalo usernya pencet tombol lihat komentar nanti kirim ajax request ke routes/api/get_comment.php
@@ -53,6 +53,9 @@ $data = database_query_result()[0];
             </div>
         </div>
     </div>
+    <div class="about" style="text-align: center; font-size: 0.875rem;">
+        <p>Copyright &copy; 2023 Aditya Wahyu Santoso & Muhammad Ikhsan</p>
+    </div>
     <div style="padding-bottom: 800px;"></div>
 </div>
 <script>
@@ -71,7 +74,6 @@ $data = database_query_result()[0];
 
     function insertComments() {
         var inp = document.getElementsByName('komen-input')[0].value;
-        console.log(inp);
         var id = document.getElementsByName('id')[0].value;
         var komen = document.getElementById('komen-ajhh');
         var xhttp = new XMLHttpRequest();
@@ -79,16 +81,18 @@ $data = database_query_result()[0];
         xhttp.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
         xhttp.onreadystatechange = function() {
             if (this.readyState == 4 && this.status == 200) {
-                komen.innerHTML = this.responseText;
+                komen.innerHTML = '<h3 style="text-align: center;">Wait...</h3>';
+                komen.innerHTML += this.responseText;
                 document.getElementsByName('komen-input')[0].value = '';
             }
         }
         xhttp.send('komen=' + encodeURIComponent(inp) + '&id=' + encodeURIComponent(id));
-        setTimeout(updateComments, 1000);
+        setTimeout(updateComments, 1500);
     }
     document.getElementById('form-komen').addEventListener('submit', function(e) {
         e.preventDefault();
         insertComments();
     })
     updateComments();
+    setInterval(updateComments, 5000)
 </script>
